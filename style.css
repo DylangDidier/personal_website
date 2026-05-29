@@ -1,0 +1,442 @@
+/* PREMIUM DEVELOPER DESIGN SYSTEM
+ * Vercel/Linear Minimalist Aesthetic 
+ */
+
+ :root {
+    --bg-dark: #000000;
+    --bg-surface: #0a0a0a;
+    --bg-card: #111111;
+    --bg-card-hover: #161616;
+    
+    --text-pure: #ffffff;
+    --text-main: #f5f5f7;
+    --text-muted: #8e8e93;
+    --text-dark: #444446;
+    
+    --accent-blue: #0071e3;
+    --accent-glow: rgba(0, 113, 227, 0.15);
+    --border-subtle: #1c1c1e;
+    --border-hover: #2c2c2e;
+    
+    --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+    --font-mono: "SF Pro Text", "SF Mono", Menlo, Consolas, monospace;
+    
+    --header-blur: rgba(0, 0, 0, 0.7);
+}
+
+[data-theme="light"] {
+    --bg-dark: #f5f5f7;
+    --bg-surface: #ffffff;
+    --bg-card: #fdfdfd;
+    --bg-card-hover: #f5f5f7;
+    
+    --text-pure: #000000;
+    --text-main: #1d1d1f;
+    --text-muted: #86868b;
+    --text-dark: #d2d2d7;
+    
+    --accent-blue: #0071e3;
+    --accent-glow: rgba(0, 113, 227, 0.05);
+    --border-subtle: #e5e5ea;
+    --border-hover: #d1d1d6;
+    
+    --header-blur: rgba(245, 245, 247, 0.7);
+}
+
+/* Global Reset & Base Mechanics */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: var(--bg-dark);
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: -0.011rem;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Floating Navigation Header */
+header {
+    background-color: var(--header-blur);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border-subtle);
+    padding: 1rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: -0.03rem;
+    text-transform: uppercase;
+    color: var(--text-pure);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: var(--text-pure);
+}
+
+.resume-link {
+    font-family: var(--font-mono);
+    font-size: 0.75rem !important;
+    background-color: var(--text-pure);
+    color: var(--bg-dark) !important;
+    padding: 0.4rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 600;
+    letter-spacing: 0.02rem;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.resume-link:hover {
+    opacity: 0.9;
+    transform: translateY(-0.5px);
+}
+
+/* Layout Blueprint Container */
+main {
+    max-width: 840px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+section {
+    padding: 7rem 0;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+/* Hero Presentation */
+.hero-section {
+    padding: 11rem 0 7rem 0;
+}
+
+.hero-section h2 {
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: -0.08rem;
+    line-height: 1.05;
+    color: var(--text-pure);
+    margin-bottom: 1.75rem;
+    background: linear-gradient(180deg, var(--text-pure) 60%, var(--text-muted));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--text-muted);
+    line-height: 1.4;
+    letter-spacing: -0.02rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-content p:not(.subtitle) {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    max-width: 680px;
+}
+
+/* Section Typographics */
+section h3 {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.08rem;
+    color: var(--text-muted);
+    margin-bottom: 3.5rem;
+}
+
+/* Technical Stack Cards Architecture */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-card {
+    background-color: var(--bg-surface);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-subtle);
+}
+
+.skill-card h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-pure);
+    margin-bottom: 0.75rem;
+}
+
+.skill-card p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* ==========================================================================
+   SCROLL POP-UP ANIMATION MECHANICS & PROJECT CONTAINERS
+   ========================================================================== */
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.project-detailed-card {
+    background-color: var(--bg-surface);
+    padding: 3rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-subtle);
+    
+    /* Animation hidden states */
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Class triggered by JavaScript when scrolled into view */
+.project-detailed-card.reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-detailed-card:hover {
+    background-color: var(--bg-card-hover);
+    border-color: var(--border-hover);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.project-main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-subtle);
+    padding-bottom: 1.25rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.project-main-header h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.04rem;
+    color: var(--text-pure);
+}
+
+.project-tags {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.project-tags span {
+    font-family: var(--font-mono);
+    background-color: var(--bg-dark);
+    color: var(--text-muted);
+    font-size: 0.65rem;
+    font-weight: 500;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    border: 1px solid var(--border-subtle);
+}
+
+/* Project Narrative Text Blocks */
+.project-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.project-sub-section h5 {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06rem;
+    color: var(--text-dark);
+    margin-bottom: 0.4rem;
+    font-weight: 700;
+}
+
+.project-sub-section p {
+    font-size: 0.98rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Bulleted List Alignment Mechanics */
+.project-sub-section ul {
+    list-style-type: none;
+    padding-left: 0.1rem;
+}
+
+.project-sub-section li {
+    position: relative;
+    font-size: 0.98rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+    padding-left: 1.25rem;
+}
+
+.project-sub-section li:last-child {
+    margin-bottom: 0;
+}
+
+/* Custom Minimalist Dash Bullets */
+.project-sub-section li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--text-dark);
+    font-family: var(--font-mono);
+    transition: color 0.3s ease;
+}
+
+.project-detailed-card:hover .project-sub-section li::before {
+    color: var(--accent-blue);
+}
+
+/* Highlight Results Section */
+.project-sub-section:last-child li {
+    color: var(--text-main);
+    font-weight: 500;
+}
+
+.project-sub-section:last-child li::before {
+    color: var(--accent-blue);
+}
+
+/* Timeline Architecture for Experience Tracking */
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.exp-item {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.exp-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    bottom: -3.5rem;
+    width: 1px;
+    background-color: var(--border-subtle);
+}
+
+.exp-item:last-child::before { display: none; }
+
+.exp-item::after {
+    content: '';
+    position: absolute;
+    left: -3px;
+    top: 0.5rem;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: var(--text-dark);
+    transition: all 0.3s ease;
+}
+
+.exp-item:hover::after {
+    background-color: var(--accent-blue);
+    box-shadow: 0 0 12px var(--accent-blue);
+}
+
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.75rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.exp-header h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-pure);
+}
+
+.exp-date {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.exp-item p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+/* Micro-Engineered Theme Swapper */
+.btn-toggle {
+    background: transparent;
+    border: 1px solid var(--border-subtle);
+    font-size: 0.9rem;
+    padding: 0.4rem;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.btn-toggle:hover {
+    border-color: var(--border-hover);
+    background-color: var(--bg-surface);
+}
+
+footer {
+    text-align: center;
+    padding: 6rem 2rem;
+    color: var(--text-dark);
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+}
+
+@media (max-width: 768px) {
+    header { padding: 1rem 2rem; }
+    nav { gap: 1.5rem; }
+    .hero-section h2 { font-size: 2.8rem; }
+    section { padding: 5rem 0; }
+    .project-detailed-card { padding: 2rem; }
+    .exp-header { flex-direction: column; align-items: flex-start; gap: 0.25rem; }
+}
