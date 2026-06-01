@@ -1,7 +1,3 @@
-/* PREMIUM DEVELOPER DESIGN SYSTEM
- * Vercel/Linear Minimalist Aesthetic 
- */
-
  :root {
     --bg-dark: #000000;
     --bg-surface: #0a0a0a;
@@ -32,7 +28,7 @@
     
     --text-pure: #000000;
     --text-main: #1d1d1f;
-    --text-muted: #86868b;
+    --text-muted: #2a2a2a;
     --text-dark: #d2d2d7;
     
     --accent-blue: #0071e3;
@@ -40,7 +36,7 @@
     --border-subtle: #e5e5ea;
     --border-hover: #d1d1d6;
     
-    --header-blur: rgba(245, 245, 247, 0.7);
+    --header-blur: rgba(239, 239, 241, 0.7);
 }
 
 /* Global Reset & Base Mechanics */
