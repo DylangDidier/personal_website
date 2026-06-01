@@ -15,9 +15,7 @@ themeToggle.addEventListener('click', () => {
     localStorage.setItem('theme', theme);
 });
 
-// ==========================================================================
-// SCROLL REVEAL / POP-UP LOGIC USING INTERSECTION OBSERVER
-// ==========================================================================
+
 const revealProjects = () => {
     const cards = document.querySelectorAll('.project-detailed-card');
     
