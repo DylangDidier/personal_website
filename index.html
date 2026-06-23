@@ -55,29 +55,29 @@
                 <div class="project-detailed-card">
                     <div class="project-main-header">
                         <h4>Haddy Handheld Defect Logger</h4>
-                        <div class="project-tags"><span>Python</span><span>Hardware Integration</span><span>3D Printing</span></div>
+                        <div class="project-tags"><span>Python</span><span>Hardware Integration</span><span>CAD / 3D Printing</span></div>
                     </div>
                     <div class="project-body">
                         <div class="project-sub-section">
                             <h5>Overview</h5>
-                            <p>Quality control on the factory floor used to mean juggling a camera, a clipboard, and a tape measure. I built a custom 3D-printed smart camera from scratch that does all of that in one click. An operator just points the laser at a defect, pulls the trigger, and the device snaps a picture, measures the defect, and uploads everything straight to the cloud.</p>
+                            <p>Quality control on the manufacturing floor previously required operators to manage a camera, clipboard, and measuring tools simultaneously. To solve this, I engineered a custom 3D-printed smart data logger that consolidates this workflow. By pointing a targeting laser and pulling a trigger, operators can capture an image that automatically calculates defect dimensions and syncs directly to the cloud.</p>
                         </div>
                         <div class="project-sub-section">
                             <h5>My Contributions</h5>
                             <ul>
-                                <li><strong>Hardware & Wiring:</strong> Hooked up a high-res camera, a Time-of-Flight distance sensor, a targeting laser, and a touchscreen to a Raspberry Pi 4, getting them all to talk to each other via GPIO pins and I2C.</li>
-                                <li><strong>3D Modeling & Printing:</strong> Designed the physical case from scratch using CAD and 3D printed it using tough PETG plastic so it could survive the rough environment of a factory floor.</li>
-                                <li><strong>Custom UI:</strong> Coded a dark-mode touchscreen interface using Python (CustomTkinter) so operators can quickly tap in the material type and what kind of defect they are logging.</li>
-                                <li><strong>Image Processing & Math:</strong> Wrote Python scripts that use the distance sensor to calculate exactly how big the defect is. It then slaps a "Polaroid-style" white border on the image with the measurements, timestamp, and notes baked right into the JPEG.</li>
-                                <li><strong>Power System & Timing:</strong> Wired in a step-down converter so the whole device runs off a standard DeWalt drill battery—if it dies, operators just hot-swap a fresh battery. I also wrote micro-delays into the code to turn off the targeting laser a split-second before the camera clicks so the red glare doesn't ruin the photo.</li>
+                                <li><strong>Hardware Integration:</strong> Interfaced a high-resolution camera, Time-of-Flight (ToF) distance sensor, targeting laser, and touchscreen with a Raspberry Pi 4 using I2C and GPIO protocols.</li>
+                                <li><strong>Mechanical Design:</strong> Designed a custom, durable enclosure using CAD software and manufactured it with high-strength PETG filament to withstand the physical demands of an industrial shop floor.</li>
+                                <li><strong>User Interface:</strong> Developed a touchscreen GUI in Python (CustomTkinter) to allow operators to easily input material types and categorize defects on the fly.</li>
+                                <li><strong>Image Processing & Telemetry:</strong> Wrote Python logic that utilizes ToF sensor data to calculate the exact physical dimensions of the defect. Automated a pipeline to embed a metadata footer—containing measurements, material data, and timestamps—directly onto the saved JPEG file.</li>
+                                <li><strong>Power System & Timing:</strong> Integrated a step-down converter to power the system using hot-swappable DeWalt power tool batteries. Solved image glare by programming micro-delays to disable the targeting laser a fraction of a second before the camera shutter releases.</li>
                             </ul>
                         </div>
                         <div class="project-sub-section">
                             <h5>Results</h5>
                             <ul>
-                                <li>Turned a really annoying, multi-step QA process into a simple, reliable point-and-shoot tool.</li>
-                                <li>Got rid of human error when measuring defects, since the distance sensor and the Python script do all the math automatically.</li>
-                                <li>Set it up to automatically upload logs and photos to Google Drive (using Rclone), so the engineering team can see problems on the floor in real-time.</li>
+                                <li>Streamlined a multi-step quality assurance process into a single, user-friendly point-and-shoot tool, significantly reducing logging time.</li>
+                                <li>Eliminated human error in defect measurement by automating the area calculation using real-time distance sensor data.</li>
+                                <li>Configured automated, headless cloud syncing (via Rclone) to Google Drive, giving the engineering team instant visibility into shop-floor defects.</li>
                             </ul>
                         </div>
                     </div>
