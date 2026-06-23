@@ -66,9 +66,9 @@
                             <h5>My Contributions</h5>
                             <ul>
                                 <li><strong>Hardware Integration:</strong> Interfaced a high-resolution camera, Time-of-Flight (ToF) distance sensor, targeting laser, and touchscreen with a Raspberry Pi 4 using I2C and GPIO protocols.</li>
-                                <li><strong>Mechanical Design:</strong> Designed a custom, durable enclosure using CAD software and manufactured it with high-strength PETG filament to withstand the physical demands of an industrial shop floor.</li>
+                                <li><strong>Mechanical Design:</strong> Designed a custom, durable enclosure using CAD software and manufactured it with high-strength ABS filament to withstand the physical demands of an industrial shop floor.</li>
                                 <li><strong>User Interface:</strong> Developed a touchscreen GUI in Python (CustomTkinter) to allow operators to easily input material types and categorize defects on the fly.</li>
-                                <li><strong>Image Processing & Telemetry:</strong> Wrote Python logic that utilizes ToF sensor data to calculate the exact physical dimensions of the defect. Automated a pipeline to embed a metadata footer—containing measurements, material data, and timestamps—directly onto the saved JPEG file.</li>
+                                <li><strong>Image Processing & Telemetry:</strong> Wrote Python logic that utilizes ToF sensor data to calculate the exact physical dimensions of the defect. Automated a pipeline to embed a metadata footer, containing measurements, material data, and timestamps, directly onto the saved JPEG file.</li>
                                 <li><strong>Power System & Timing:</strong> Integrated a step-down converter to power the system using hot-swappable DeWalt power tool batteries. Solved image glare by programming micro-delays to disable the targeting laser a fraction of a second before the camera shutter releases.</li>
                             </ul>
                         </div>
@@ -79,6 +79,12 @@
                                 <li>Eliminated human error in defect measurement by automating the area calculation using real-time distance sensor data.</li>
                                 <li>Configured automated, headless cloud syncing (via Rclone) to Google Drive, giving the engineering team instant visibility into shop-floor defects.</li>
                             </ul>
+                        </div>
+                        <div class="project-gallery">
+                            <!-- Notice the path is now assets/ instead of images/ -->
+                            <img src="/assets/complete_internal.png" alt="Handheld Defect Logger Internal Hardware">
+                            <img src="/assets/defect_logger_highview.png" alt="Front View">
+                            <img src="/assets/defect_logger_midview.png" alt="Side View">
                         </div>
                     </div>
                 </div>
@@ -135,7 +141,7 @@
                     </div>
                 </div>
 
-               <!-- Project: Haddy Central Knowledge Hub -->
+               <!-- Project 4: Haddy Central Knowledge Hub -->
                <div class="project-detailed-card">
                 <div class="project-main-header">
                     <h4>Haddy Central Knowledge Hub</h4>
