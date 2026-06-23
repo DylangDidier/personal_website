@@ -91,53 +91,49 @@
                     </div> 
                 </div> 
 
+                <!-- Project 2: Grafana Alerts -->
                 <div class="project-detailed-card">
                     <div class="project-main-header">
-                        <h4>Grafana Integrated Alerting System</h4>
-                        <div class="project-tags"><span>Data Pipelines</span><span>DevOps</span></div>
+                        <h4>Industrial IoT Telemetry & Alerting Pipeline</h4>
+                        <div class="project-tags"><span>ClickHouse SQL</span><span>Grafana</span><span>Go</span><span>IoT</span></div>
                     </div>
                     <div class="project-body">
                         <div class="project-sub-section">
                             <h5>Overview</h5>
-                            <p>Configured real-time, hardware-integrated alerting dashboards designed to manage critical production machinery pipelines.</p>
+                            <p>Engineered a production-grade infrastructure monitoring system for industrial 3D printers. The pipeline tracks real-time machine states and connectivity, intelligently filtering out routine maintenance and delivering clean, formatted alerts directly to factory floor operators.</p>
                         </div>
                         <div class="project-sub-section">
-                            <h5>My Contributions</h5>
+                            <h5>My Contributions & Impact</h5>
                             <ul>
-                                <li>Built comprehensive telemetry data pipelines to ingest live system health states.</li>
-                                <li>Designed visual, live-streaming metric dashboards using Grafana.</li>
-                            </ul>
-                        </div>
-                        <div class="project-sub-section">
-                            <h5>Results</h5>
-                            <ul>
-                                <li>Established a structured rule-alerting layout that automatically triggers notifications on system anomalies to maximize machine uptime.</li>
+                                <li><strong>Complex Alert Logic:</strong> Wrote ClickHouse SQL queries and advanced Grafana math expressions to catch both active machine faults and "silent disconnects" (network or power loss), completely eliminating monitoring blind spots on the floor.</li>
+                                <li><strong>Smart Alert Suppression:</strong> Built logic to actively detect routine machine maintenance—like standard purge cycles—intelligently suppressing notifications to prevent operators from being spammed with false positives.</li>
+                                <li><strong>Dynamic Go Templating:</strong> Developed resilient Go-template scripts for Grafana's Contact Points, transforming raw JSON data dumps into highly readable, emoji-coded status messages (e.g., '🔌 Power Off', '🔴 Aborted') that staff can read at a glance.</li>
+                                <li><strong>Pipeline Resilience:</strong> Engineered the notification routing with strict string casting and index safety checks to guarantee the alert system would never crash or fail silently, even if handling mocked or floating-point test data.</li>
+                                <li><strong>Consolidated Communications:</strong> Replaced multiple cluttered alert rules with a single, unified data stream, drastically improving the operator experience and response times during actual machine failures.</li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
+                <!-- Project 3: Haddy Andon Lights -->
                 <div class="project-detailed-card">
                     <div class="project-main-header">
-                        <h4>Andon Stack Light Hardware Integration</h4>
-                        <div class="project-tags"><span>Hardware</span><span>Linux Automation</span></div>
+                        <h4>Industrial Stack Light Edge Driver</h4>
+                        <div class="project-tags"><span>Node.js</span><span>Hardware Integration</span><span>Data Analysis</span></div>
                     </div>
                     <div class="project-body">
                         <div class="project-sub-section">
                             <h5>Overview</h5>
-                            <p>Engineered an automation loop bridging physical factory floor alert states directly to large-scale production machinery hardware.</p>
+                            <p>Engineered a Node.js edge driver to control physical PATLITE signal towers mounted on large-format 3D printing robots, providing operators with real-time visual machine statuses. Following the hardware integration, I conducted a deep-dive analysis of 90 days of machine telemetry to design a high-accuracy, zero-noise alerting system for the factory floor.</p>
                         </div>
                         <div class="project-sub-section">
-                            <h5>My Contributions</h5>
+                            <h5>My Contributions & Impact</h5>
                             <ul>
-                                <li>Programmed a localized controller running a Linux-based environment to interface directly with industrial machinery.</li>
-                                <li>Coordinated physical electrical signal states and hardware mapping logic.</li>
-                            </ul>
-                        </div>
-                        <div class="project-sub-section">
-                            <h5>Results</h5>
-                            <ul>
-                                <li>Integrated physical Andon stack lights onto production units to provide immediate, on-floor visual problem detection.</li>
+                                <li><strong>Hardware API Integration:</strong> Engineered a modular Node.js class to communicate with physical signal towers via REST endpoints, implementing robust async/await error handling and timeout catches for unreachable edge devices.</li>
+                                <li><strong>Algorithm Optimization:</strong> Developed a pure function mapping dynamic machine states to hardware payload strings. Optimized array lookups using JavaScript `Set` objects to achieve O(1) constant-time channel validation, ensuring maximum execution performance.</li>
+                                <li><strong>Two-Tiered Testing Suite:</strong> Built comprehensive testing protocols using the Node native test runner. Combined offline matrix verification with live network sweeps that successfully benchmarked hardware API latency at under 75ms.</li>
+                                <li><strong>Data-Driven Architecture:</strong> Analyzed 90 days of raw CEAD machine telemetry (512 distinct alarm codes) to isolate the 27 critical codes that actually trigger a hard stop, while proving that the most frequent alarm (fired 32.7 million times) was merely a harmless parking state.</li>
+                                <li><strong>Eliminating Alarm Fatigue:</strong> Used the telemetry findings to filter out millions of false positives, preventing the factory light towers from showing "false reds." This laid the technical foundation to replace a noisy legacy alerting system with a highly accurate, zero-noise fault notification pipeline.</li>
                             </ul>
                         </div>
                     </div>
