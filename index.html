@@ -50,7 +50,39 @@
         <section id="projects" class="projects-section">
             <h3>Featured Projects</h3>
             <div class="projects-container">
-                
+
+                <div class="project-detailed-card">
+                    <div class="project-main-header">
+                        <h4>Haddy Handheld Defect Logger</h4>
+                        <div class="project-tags"><span>Edge Computing</span><span>IoT Automation</span><span>Hardware Integration</span></div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-sub-section">
+                            <h5>Overview</h5>
+                            <p>Engineered a custom, 3D-printed smart camera and data logging device to optimize quality control (QC) workflows on the manufacturing shop floor. Bypassed tedious, multi-tool manual tracking systems by consolidating laser targeting, distance telemetry, high-resolution image processing, and secure cloud synchronization into a single-click, ruggedized point-and-shoot tool.</p>
+                        </div>
+                        <div class="project-sub-section">
+                            <h5>My Contributions</h5>
+                            <ul>
+                                <li><strong>Hardware & Systems Architecture:</strong> Wired and programmed an IMX708 high-resolution camera, physical tactile trigger button, 5V targeting laser, and a VL53L0X Time-of-Flight (ToF) distance sensor to communicate over I2C and GPIO pins via a Raspberry Pi 4 brain.</li>
+                                <li><strong>Telemetry Math & Automation:</strong> Developed trigonometric logic parsing real-time ToF distance inputs to dynamically calculate the camera’s active field of view in millimeters, enabling human-error-free defect scale evaluations.</li>
+                                <li><strong>Image Processing Pipeline:</strong> Formulated an automated image manipulation script using Python (Pillow) to dynamically draw bounding grids and permanently stamp a white metadata footer onto captured frames, embedding timestamps, material configurations, and calculated metrics directly into the JPEG buffers.</li>
+                                <li><strong>Timing & Race Condition Isolation:</strong> Resolved critical rolling-shutter artifacts and red glare saturation by programming tight hardware micro-delays, shutting off the laser diode exactly 0.25 seconds prior to camera shutter release.</li>
+                                <li><strong>Industrial Power Engineering:</strong> Designed an isolated power system running completely off a standard 18V/20V DeWalt power tool battery using a step-down buck converter, allowing hot-swappable floor operations.</li>
+                                <li><strong>UI Development & Deployment:</strong> Authored a dark-mode touch user interface using CustomTkinter for quick operator categorization inputs and configured a headless Linux boot sequence with failsafe Bash scripts to launch the application into fullscreen mode upon boot.</li>
+                            </ul>
+                        </div>
+                        <div class="project-sub-section">
+                            <h5>Results</h5>
+                            <ul>
+                                <li><strong>Process Consolidation:</strong> Replaced a fragmented clipboard-and-camera pipeline with an immediate enterprise-grade digital capture system, reducing QC processing times drastically.</li>
+                                <li><strong>Instant Pipeline Visibility:</strong> Integrated Rclone to handle headless cloud uploading, feeding live CSV telemetry sheets and documented logs straight to a secure engineering directory seconds after on-floor triggers.</li>
+                                <li><strong>Cost Optimization:</strong> Delivered a fully serviceable, rugged smart scanner using off-the-shelf maker components and 3D-printed enclosures, minimizing maintenance costs relative to proprietary alternatives.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="project-detailed-card">
                     <div class="project-main-header">
                         <h4>Grafana Integrated Alerting System</h4>
@@ -154,34 +186,6 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="project-detailed-card">
-                    <div class="project-main-header">
-                        <h4>Loan & Interest Repayment Calculator</h4>
-                        <div class="project-tags"><span>C++</span><span>Algorithms</span></div>
-                    </div>
-                    <div class="project-body">
-                        <div class="project-sub-section">
-                            <h5>Overview</h5>
-                            <p>Developed a terminal-based program to evaluate real-world loan lifecycles using strict financial formulas.</p>
-                        </div>
-                        <div class="project-sub-section">
-                            <h5>My Contributions</h5>
-                            <ul>
-                                <li>Coded mathematical algorithms and complex conditional execution flows inside a strict C++ environment.</li>
-                                <li>Implemented control loops to dynamically map out complex amortization schedules.</li>
-                            </ul>
-                        </div>
-                        <div class="project-sub-section">
-                            <h5>Results</h5>
-                            <ul>
-                                <li>Successfully tracked lifetime interest calculations, publishing the source code to GitHub for clean version control.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
         </section>
 
         <section id="experience" class="experience-section">
