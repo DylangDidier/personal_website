@@ -56,29 +56,33 @@
                         <h4>Haddy Handheld Defect Logger</h4>
                         <div class="project-tags"><span>Edge Computing</span><span>IoT Automation</span><span>Hardware Integration</span></div>
                     </div>
+                    <!-- Project 1: Haddy Handheld Defect Logger -->
+                <div class="project-detailed-card">
+                    <div class="project-main-header">
+                        <h4>Haddy Handheld Defect Logger</h4>
+                        <div class="project-tags"><span>Python</span><span>Hardware Integration</span><span>3D Printing</span></div>
+                    </div>
                     <div class="project-body">
                         <div class="project-sub-section">
                             <h5>Overview</h5>
-                            <p>Engineered a custom, 3D-printed smart camera and data logging device to optimize quality control (QC) workflows on the manufacturing shop floor. Bypassed tedious, multi-tool manual tracking systems by consolidating laser targeting, distance telemetry, high-resolution image processing, and secure cloud synchronization into a single-click, ruggedized point-and-shoot tool.</p>
+                            <p>Quality control on the factory floor used to mean juggling a camera, a clipboard, and a tape measure. I built a custom 3D-printed smart camera from scratch that does all of that in one click. An operator just points the laser at a defect, pulls the trigger, and the device snaps a picture, measures the defect, and uploads everything straight to the cloud.</p>
                         </div>
                         <div class="project-sub-section">
                             <h5>My Contributions</h5>
                             <ul>
-                                <li><strong>3D Design & Modeling:</strong> Modeled a custom, multi-part ergonomic enclosure from scratch using CAD software, meticulously placing internal standoffs, mounting brackets, and tolerances to securely house the Raspberry Pi, touchscreen, ToF sensor, battery dock, and wiring harness.</li>
-                                <li><strong>Hardware & Systems Architecture:</strong> Wired and programmed an IMX708 high-resolution camera, physical tactile trigger button, 5V targeting laser, and a VL53L0X Time-of-Flight (ToF) distance sensor to communicate over I2C and GPIO pins via a Raspberry Pi 4 brain.</li>
-                                <li><strong>Telemetry Math & Automation:</strong> Developed trigonometric logic parsing real-time ToF distance inputs to dynamically calculate the camera’s active field of view in millimeters, enabling human-error-free defect scale evaluations.</li>
-                                <li><strong>Image Processing Pipeline:</strong> Formulated an automated image manipulation script using Python (Pillow) to dynamically draw bounding grids and permanently stamp a white metadata footer onto captured frames, embedding timestamps, material configurations, and calculated metrics directly into the JPEG buffers.</li>
-                                <li><strong>Timing & Race Condition Isolation:</strong> Resolved critical rolling-shutter artifacts and red glare saturation by programming tight hardware micro-delays, shutting off the laser diode exactly 0.25 seconds prior to camera shutter release.</li>
-                                <li><strong>Industrial Power Engineering:</strong> Designed an isolated power system running completely off a standard 18V/20V DeWalt power tool battery using a step-down buck converter, allowing hot-swappable floor operations.</li>
-                                <li><strong>UI Development & Deployment:</strong> Authored a dark-mode touch user interface using CustomTkinter for quick operator categorization inputs and configured a headless Linux boot sequence with failsafe Bash scripts to launch the application into fullscreen mode upon boot.</li>
+                                <li><strong>Hardware & Wiring:</strong> Hooked up a high-res camera, a Time-of-Flight distance sensor, a targeting laser, and a touchscreen to a Raspberry Pi 4, getting them all to talk to each other via GPIO pins and I2C.</li>
+                                <li><strong>3D Modeling & Printing:</strong> Designed the physical case from scratch using CAD and 3D printed it using tough PETG plastic so it could survive the rough environment of a factory floor.</li>
+                                <li><strong>Custom UI:</strong> Coded a dark-mode touchscreen interface using Python (CustomTkinter) so operators can quickly tap in the material type and what kind of defect they are logging.</li>
+                                <li><strong>Image Processing & Math:</strong> Wrote Python scripts that use the distance sensor to calculate exactly how big the defect is. It then slaps a "Polaroid-style" white border on the image with the measurements, timestamp, and notes baked right into the JPEG.</li>
+                                <li><strong>Power System & Timing:</strong> Wired in a step-down converter so the whole device runs off a standard DeWalt drill battery—if it dies, operators just hot-swap a fresh battery. I also wrote micro-delays into the code to turn off the targeting laser a split-second before the camera clicks so the red glare doesn't ruin the photo.</li>
                             </ul>
                         </div>
                         <div class="project-sub-section">
                             <h5>Results</h5>
                             <ul>
-                                <li><strong>Process Consolidation:</strong> Replaced a fragmented clipboard-and-camera pipeline with an immediate enterprise-grade digital capture system, reducing QC processing times drastically.</li>
-                                <li><strong>Instant Pipeline Visibility:</strong> Integrated Rclone to handle headless cloud uploading, feeding live CSV telemetry sheets and documented logs straight to a secure engineering directory seconds after on-floor triggers.</li>
-                                <li><strong>Cost Optimization:</strong> Delivered a fully serviceable, rugged smart scanner using off-the-shelf maker components and 3D-printed enclosures, minimizing maintenance costs relative to proprietary alternatives.</li>
+                                <li>Turned a really annoying, multi-step QA process into a simple, reliable point-and-shoot tool.</li>
+                                <li>Got rid of human error when measuring defects, since the distance sensor and the Python script do all the math automatically.</li>
+                                <li>Set it up to automatically upload logs and photos to Google Drive (using Rclone), so the engineering team can see problems on the floor in real-time.</li>
                             </ul>
                         </div>
                     </div>
