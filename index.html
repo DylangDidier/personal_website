@@ -64,6 +64,7 @@
                         <div class="project-sub-section">
                             <h5>My Contributions</h5>
                             <ul>
+                                <li><strong>3D Design & Modeling:</strong> Modeled a custom, multi-part ergonomic enclosure from scratch using CAD software, meticulously placing internal standoffs, mounting brackets, and tolerances to securely house the Raspberry Pi, touchscreen, ToF sensor, battery dock, and wiring harness.</li>
                                 <li><strong>Hardware & Systems Architecture:</strong> Wired and programmed an IMX708 high-resolution camera, physical tactile trigger button, 5V targeting laser, and a VL53L0X Time-of-Flight (ToF) distance sensor to communicate over I2C and GPIO pins via a Raspberry Pi 4 brain.</li>
                                 <li><strong>Telemetry Math & Automation:</strong> Developed trigonometric logic parsing real-time ToF distance inputs to dynamically calculate the camera’s active field of view in millimeters, enabling human-error-free defect scale evaluations.</li>
                                 <li><strong>Image Processing Pipeline:</strong> Formulated an automated image manipulation script using Python (Pillow) to dynamically draw bounding grids and permanently stamp a white metadata footer onto captured frames, embedding timestamps, material configurations, and calculated metrics directly into the JPEG buffers.</li>
@@ -135,27 +136,33 @@
                     </div>
                 </div>
 
+                <!-- Project: Haddy Microfactory Training Infrastructure -->
                 <div class="project-detailed-card">
                     <div class="project-main-header">
-                        <h4>Haddy Centralized Training Platform</h4>
-                        <div class="project-tags"><span>Framework</span><span>Documentation</span></div>
+                        <h4>Microfactory Training & Knowledge Infrastructure</h4>
+                        <div class="project-tags"><span>Docker</span><span>Docusaurus</span><span>Jira Automation</span></div>
                     </div>
                     <div class="project-body">
                         <div class="project-sub-section">
                             <h5>Overview</h5>
-                            <p>Designed a unified, open-source technical training workspace to consolidate scattered equipment operations knowledge.</p>
+                            <p>Designed and deployed a containerized, version-controlled technical training platform to standardize operational knowledge across an industrial robotics microfactory. Consolidated tribal material tracking documents and complex multi-axis toolpath configurations into a single, localized source of truth, bridging the gap between hardware engineering and daily robotic operations.</p>
                         </div>
                         <div class="project-sub-section">
                             <h5>My Contributions</h5>
                             <ul>
-                                <li>Constructed a robust internal documentation framework utilizing a custom Docusaurus build.</li>
-                                <li>Authored modular tutorials using structured Markdown to seamlessly host technical descriptions and video assets.</li>
+                                <li><strong>Containerized Platform Architecture:</strong> Built a scalable internal documentation web interface using Docusaurus and Markdown, utilizing Docker to guarantee instant, reproducible, and zero-dependency deployments across local Linux factory-floor machines.</li>
+                                <li><strong>Agile Workflow Integration:</strong> Managed the system lifecycle via Git/GitHub and integrated Jira APIs to automatically link print telemetry data, hardware calibration tickets, and setup sheets directly into active engineering development sprints.</li>
+                                <li><strong>Three-Tier Training Matrix:</strong> Engineered a data-driven competence matrix cross-referencing operator skill levels with material thermodynamics (e.g., standard PETG vs. warp-prone ABS/PC blends) and 45-degree multi-axis robotic toolpath complexity.</li>
+                                <li><strong>Hardware Parameter Synchronization:</strong> Designed a centralized Nozzle-to-Bead Tooling Matrix mapping exact volumetric layer tolerances across ten distinct extrusion nozzles (4mm to 15mm) to prevent structural material starvation before autonomous job launches.</li>
+                                <li><strong>High-Fidelity SOP Authoring:</strong> Translated complex machine operating procedures into strict technical manuals, including a comprehensive 9-step vacuuming, line-purging, and thermal calibration routine for multi-zone material desiccant dryers.</li>
                             </ul>
                         </div>
                         <div class="project-sub-section">
                             <h5>Results</h5>
                             <ul>
-                                <li>Delivered a highly searchable internal technical website that significantly scales onboarding for field equipment operators.</li>
+                                <li><strong>Autonomous Operational Continuity:</strong> Standardized strict stage gates, fixturing coordinates, and thermal drying constraints (like flame-retardant temperature caps), empowering the factory floor to run independently of engineering micro-management.</li>
+                                <li><strong>Mitigated Print Collapses:</strong> Drastically reduced layer delamination and mid-cycle structural failures during autonomous runs by providing instant access to correct material rheology and layer bonding rules.</li>
+                                <li><strong>Optimized Machine Turnaround:</strong> Flattened the learning curve for complex multi-zone material changeovers, serving as the ultimate onboarding framework and significantly lowering downtime when switching production lines.</li>
                             </ul>
                         </div>
                     </div>
