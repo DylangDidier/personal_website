@@ -481,3 +481,49 @@ footer {
     .project-detailed-card { padding: 2rem; }
     .exp-header { flex-direction: column; align-items: flex-start; gap: 0.25rem; }
 }
+
+/* ==========================================================================
+   MASTER GROUP CARDS (Haddy & Personal)
+   ========================================================================== */
+   .master-group-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 16px;
+    padding: 3rem;
+    margin-bottom: 4rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.master-group-header {
+    margin-bottom: 3rem;
+    border-bottom: 1px solid var(--border-subtle);
+    padding-bottom: 1.5rem;
+}
+
+.master-group-header h3 {
+    font-size: 2.2rem;
+    color: var(--text-pure);
+    letter-spacing: -0.04rem;
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+}
+
+.master-group-header p {
+    font-family: var(--font-mono);
+    color: var(--accent-blue);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+}
+
+.master-group-card .projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+@media (max-width: 768px) {
+    .master-group-card { padding: 1.5rem; }
+    .master-group-header h3 { font-size: 1.8rem; }
+}
