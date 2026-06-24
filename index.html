@@ -1,147 +1,213 @@
-<div class="master-group-card">
-    <div class="master-group-header">
-        <h3>Haddy</h3>
-        <p>Software Engineering Intern &bull; Large-Format Additive Manufacturing</p>
-    </div>
-    
-    <div class="projects-container">
-        <div class="project-detailed-card">
-            <div class="project-main-header">
-                <h4>Handheld Defect Logger</h4>
-                <div class="project-tags"><span>Python</span><span>Hardware Integration</span><span>CAD / 3D Printing</span></div>
-            </div>
-            <div class="project-body">
-                <div class="project-sub-section">
-                    <h5>Overview</h5>
-                    <p>Quality control on the manufacturing floor previously required operators to manage a camera, clipboard, and measuring tools simultaneously. To solve this, I engineered a custom 3D-printed smart data logger that consolidates this workflow. By pointing a targeting laser and pulling a trigger, operators can capture an image that automatically calculates defect dimensions and syncs directly to the cloud.</p>
-                </div>
-                <div class="project-sub-section">
-                    <h5>My Contributions</h5>
-                    <ul>
-                        <li><strong>Hardware Integration:</strong> Interfaced a high-resolution camera, Time-of-Flight (ToF) distance sensor, targeting laser, and touchscreen with a Raspberry Pi 4 using I2C and GPIO protocols.</li>
-                        <li><strong>Mechanical Design:</strong> Designed a custom, durable enclosure using CAD software and manufactured it with high-strength PETG filament to withstand the physical demands of an industrial shop floor.</li>
-                        <li><strong>User Interface:</strong> Developed a touchscreen GUI in Python (CustomTkinter) to allow operators to easily input material types and categorize defects on the fly.</li>
-                        <li><strong>Image Processing & Telemetry:</strong> Wrote Python logic that utilizes ToF sensor data to calculate the exact physical dimensions of the defect. Automated a pipeline to embed a metadata footer—containing measurements, material data, and timestamps—directly onto the saved JPEG file.</li>
-                        <li><strong>Power System & Timing:</strong> Integrated a step-down converter to power the system using hot-swappable DeWalt power tool batteries. Solved image glare by programming micro-delays to disable the targeting laser a fraction of a second before the camera shutter releases.</li>
-                    </ul>
-                </div>
-                <div class="project-sub-section">
-                    <h5>Results</h5>
-                    <ul>
-                        <li>Streamlined a multi-step quality assurance process into a single, user-friendly point-and-shoot tool, significantly reducing logging time.</li>
-                        <li>Eliminated human error in defect measurement by automating the area calculation using real-time distance sensor data.</li>
-                        <li>Configured automated, headless cloud syncing (via Rclone) to Google Drive, giving the engineering team instant visibility into shop-floor defects.</li>
-                    </ul>
-                </div>
-                <div class="project-gallery">
-                    <img src="assets/complete_internal.png" alt="Handheld Defect Logger Internal Hardware">
-                    <img src="assets/defect_logger_highview.png" alt="Front View">
-                    <img src="assets/defect_logger_midview.png" alt="Side View">
-                </div>
-            </div>
-        </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dylan Didier | Software Engineering Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-        <div class="project-detailed-card">
-            <div class="project-main-header">
-                <h4>Central Knowledge Hub</h4>
-                <div class="project-tags"><span>GitBook</span><span>Markdown</span><span>Search Architecture</span></div>
-            </div>
-            <div class="project-body">
-                <div class="project-sub-section">
-                    <h5>Overview</h5>
-                    <p>I built a centralized web platform using GitBook to organize the company's scattered documents, standard operating procedures, and troubleshooting guides into one place. It acts as a single, searchable source of truth that lets everyone—from factory technicians to sales reps—instantly find the exact information they need from any device.</p>
-                </div>
-                <div class="project-sub-section">
-                    <h5>My Contributions</h5>
-                    <ul>
-                        <li><strong>Department-Specific Navigation:</strong> Designed custom landing hubs for Sales, Engineering, and Factory Operations so each team gets a personalized dashboard rather than a confusing wall of text.</li>
-                        <li><strong>Issue-Resolution Search Engine:</strong> Configured the search functionality so typing in a specific problem seamlessly routes users to the exact external hardware manual, training doc, or Jira escalation protocol they need.</li>
-                        <li><strong>6-Tier Factory Training Integration:</strong> Mapped the factory's entire 6-level Operator-to-Technician advancement system into the hub, linking out the specific study materials required to pass each stage gate.</li>
-                        <li><strong>Version Control:</strong> Managed the site lifecycle using Git and GitHub, treating the internal wiki like a deployable codebase to safely track updates.</li>
-                    </ul>
-                </div>
-                <div class="project-sub-section">
-                    <h5>Results</h5>
-                    <ul>
-                        <li>Gave the entire company a mobile-responsive website they can pull up anywhere—whether troubleshooting on the floor or jumping on a client call.</li>
-                        <li>Eliminated the need to dig through disconnected folders, making information access incredibly fast across all departments.</li>
-                        <li>Streamlined the onboarding process by giving new hires a clear, organized starting point for their training.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+    <header>
+        <div class="logo">Dylan Didier</div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="assets/Dylan Didier Resume-2.pdf" class="resume-link" target="_blank">Resume ↗</a>
+            <button id="theme-toggle" class="btn-toggle">🌗</button>
+        </nav>
+    </header>
 
-        <div class="project-detailed-card">
-            <div class="project-main-header">
-                <h4>Industrial IoT Telemetry & Alerting Pipeline</h4>
-                <div class="project-tags"><span>ClickHouse SQL</span><span>Grafana</span><span>Data Pipelines</span><span>IoT</span></div>
+    <main>
+        <section id="about" class="hero-section">
+            <div class="hero-content">
+                <h2>Hi, I'm Dylan Didier</h2>
+                <p class="subtitle">Computer Science Student at Auburn University pursuing an Artificial Intelligence Certification.</p>
+                <p>I focus on solving practical engineering problems using modern backend environments, data visualization pipelines, robust hardware-software integrations, and automated systems.</p>
             </div>
-            <div class="project-body">
-                <div class="project-sub-section">
-                    <h5>Overview</h5>
-                    <p>Engineered a production-grade infrastructure monitoring system for industrial 3D printers. The pipeline tracks real-time machine states and connectivity, intelligently filtering out routine maintenance and delivering clean, formatted alerts directly to factory floor operators.</p>
-                </div>
-                <div class="project-sub-section">
-                    <h5>My Contributions & Impact</h5>
-                    <ul>
-                        <li><strong>Complex Alert Logic:</strong> Wrote ClickHouse SQL queries and advanced Grafana math expressions to catch both active machine faults and "silent disconnects" (network or power loss), completely eliminating monitoring blind spots on the floor.</li>
-                        <li><strong>Smart Alert Suppression:</strong> Built logic to actively detect routine machine maintenance—like standard purge cycles—intelligently suppressing notifications to prevent operators from being spammed with false positives.</li>
-                        <li><strong>Dynamic Alert Formatting:</strong> Configured Grafana Contact Points to transform raw JSON data dumps into highly readable, emoji-coded status messages (e.g., '🔌 Power Off', '🔴 Aborted') that staff can easily read at a glance.</li>
-                        <li><strong>Pipeline Resilience:</strong> Engineered the notification routing with strict data validation and payload safety checks to guarantee the alert system would never crash or fail silently, even if handling mocked or floating-point test data.</li>
-                        <li><strong>Consolidated Communications:</strong> Replaced multiple cluttered alert rules with a single, unified data stream, drastically improving the operator experience and response times during actual machine failures.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+        </section>
 
-        <div class="project-detailed-card">
-            <div class="project-main-header">
-                <h4>Industrial Stack Light Edge Driver</h4>
-                <div class="project-tags"><span>Node.js</span><span>Hardware Integration</span><span>Data Analysis</span></div>
-            </div>
-            <div class="project-body">
-                <div class="project-sub-section">
-                    <h5>Overview</h5>
-                    <p>Engineered a Node.js edge driver to control physical PATLITE signal towers mounted on large-format 3D printing robots, providing operators with real-time visual machine statuses. Following the hardware integration, I conducted a deep-dive analysis of 90 days of machine telemetry to design a high-accuracy, zero-noise alerting system for the factory floor.</p>
+        <section id="skills" class="skills-section">
+            <h3>Technical Stack</h3>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h4>Languages</h4>
+                    <p>Python, Java, C++, SQL, JavaScript (Node.js), HTML/CSS, Bash/Shell, R, Ruby</p>
                 </div>
-                <div class="project-sub-section">
-                    <h5>My Contributions & Impact</h5>
-                    <ul>
-                        <li><strong>Hardware API Integration:</strong> Engineered a modular Node.js class to communicate with physical signal towers via REST endpoints, implementing robust async/await error handling and timeout catches for unreachable edge devices.</li>
-                        <li><strong>Algorithm Optimization:</strong> Developed a pure function mapping dynamic machine states to hardware payload strings. Optimized array lookups using JavaScript `Set` objects to achieve O(1) constant-time channel validation, ensuring maximum execution performance.</li>
-                        <li><strong>Two-Tiered Testing Suite:</strong> Built comprehensive testing protocols using the Node native test runner. Combined offline matrix verification with live network sweeps that successfully benchmarked hardware API latency at under 75ms.</li>
-                        <li><strong>Data-Driven Architecture:</strong> Analyzed 90 days of raw CEAD machine telemetry (512 distinct alarm codes) to isolate the 27 critical codes that actually trigger a hard stop, while proving that the most frequent alarm (fired 32.7 million times) was merely a harmless parking state.</li>
-                        <li><strong>Eliminating Alarm Fatigue:</strong> Used the telemetry findings to filter out millions of false positives, preventing the factory light towers from showing "false reds." This laid the technical foundation to replace a noisy legacy alerting system with a highly accurate, zero-noise fault notification pipeline.</li>
-                    </ul>
+                <div class="skill-card">
+                    <h4>Tools, Frameworks & Databases</h4>
+                    <p>Git/GitHub, Docker, ClickHouse, Grafana, REST APIs (Axios), Pandas, NumPy, GitBook</p>
                 </div>
-            </div>
-        </div>
-    </div> </div> <div class="master-group-card">
-    <div class="master-group-header">
-        <h3>Personal Projects</h3>
-        <p>Independent Engineering & Software Development</p>
-    </div>
-    
-    <div class="projects-container">
-        <div class="project-detailed-card">
-            <div class="project-main-header">
-                <h4>3D Virtual Reality Flight Simulator</h4>
-                <div class="project-tags"><span>Web Development</span><span>3D Rendering</span><span>Virtual Reality</span></div>
-            </div>
-            <div class="project-body">
-                <div class="project-sub-section">
-                    <h5>Overview</h5>
-                    <p>Designed and developed an immersive, web-based 3D Virtual Reality Flight Simulator. The project focuses on rendering complex 3D environments directly in the browser while managing real-time physics and spatial movement mechanics.</p>
+                <div class="skill-card">
+                    <h4>Hardware & IoT</h4>
+                    <p>Raspberry Pi, I2C/GPIO Protocols, CAD / 3D Modeling, Edge Computing</p>
                 </div>
-                <div class="project-sub-section">
-                    <h5>Engineering Focus</h5>
-                    <ul>
-                        <li>Engineered real-time physics parameters to simulate aircraft telemetry, pitch, yaw, and spatial orientation within a fully rendered 3D airspace.</li>
-                        <li>Optimized browser performance to handle continuous rendering loops and complex graphical assets without dropping frame rates.</li>
-                    </ul>
+                <div class="skill-card">
+                    <h4>Core Interests</h4>
+                    <p>Industrial Automation, Machine Telemetry, Additive Manufacturing, Artificial Intelligence</p>
                 </div>
             </div>
-        </div>
-        
-        </div>
-</div>
+        </section>
+
+        <section id="projects" class="projects-section">
+            <h3>Featured Projects</h3>
+            <div class="projects-container">
+
+                <!-- Project 1: Haddy Handheld Defect Logger -->
+                <div class="project-detailed-card">
+                    <div class="project-main-header">
+                        <h4>Haddy Handheld Defect Logger</h4>
+                        <div class="project-tags"><span>Python</span><span>Hardware Integration</span><span>CAD / 3D Printing</span></div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-sub-section">
+                            <h5>Overview</h5>
+                            <p>Quality control on the manufacturing floor previously required operators to manage a camera, clipboard, and measuring tools simultaneously. To solve this, I engineered a custom 3D-printed smart data logger that consolidates this workflow. By pointing a targeting laser and pulling a trigger, operators can capture an image that automatically calculates defect dimensions and syncs directly to the cloud.</p>
+                        </div>
+                        <div class="project-sub-section">
+                            <h5>My Contributions</h5>
+                            <ul>
+                                <li><strong>Hardware Integration:</strong> Interfaced a high-resolution camera, Time-of-Flight (ToF) distance sensor, targeting laser, and touchscreen with a Raspberry Pi 4 using I2C and GPIO protocols.</li>
+                                <li><strong>Mechanical Design:</strong> Designed a custom, durable enclosure using CAD software and manufactured it with high-strength ABS filament to withstand the physical demands of an industrial shop floor.</li>
+                                <li><strong>User Interface:</strong> Developed a touchscreen GUI in Python (CustomTkinter) to allow operators to easily input material types and categorize defects on the fly.</li>
+                                <li><strong>Image Processing & Telemetry:</strong> Wrote Python logic that utilizes ToF sensor data to calculate the exact physical dimensions of the defect. Automated a pipeline to embed a metadata footer—containing measurements, material data, and timestamps—directly onto the saved JPEG file.</li>
+                                <li><strong>Power System & Timing:</strong> Integrated a step-down converter to power the system using hot-swappable DeWalt power tool batteries. Solved image glare by programming micro-delays to disable the targeting laser a fraction of a second before the camera shutter releases.</li>
+                            </ul>
+                        </div>
+                        <div class="project-sub-section">
+                            <h5>Results</h5>
+                            <ul>
+                                <li>Streamlined a multi-step quality assurance process into a single, user-friendly point-and-shoot tool, significantly reducing logging time.</li>
+                                <li>Eliminated human error in defect measurement by automating the area calculation using real-time distance sensor data.</li>
+                                <li>Configured automated, headless cloud syncing (via Rclone) to Google Drive, giving the engineering team instant visibility into shop-floor defects.</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Image Gallery Section with Fixed Relative Paths -->
+                        <div class="project-gallery">
+                            <img src="assets/defect_logger_highview.png" alt="Front View">
+                            <img src="assets/defect_logger_midview.png" alt="Side View">
+                            <img src="assets/defect_logger_topview.png" alt="top view">
+                            <img src="assets/complete_internal.png" alt="Handheld Defect Logger Internal Hardware">
+                        </div>
+                    </div> 
+                </div> 
+
+                <!-- Project 2: Grafana Alerts -->
+                <div class="project-detailed-card">
+                    <div class="project-main-header">
+                        <h4>Industrial Grafana Alerting Pipeline</h4>
+                        <div class="project-tags"><span>ClickHouse SQL</span><span>Grafana</span></div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-sub-section">
+                            <h5>Overview</h5>
+                            <p>Engineered a production-grade infrastructure monitoring system for industrial 3D printers. The pipeline tracks real-time machine states and connectivity, intelligently filtering out routine maintenance and delivering clean, formatted alerts directly to factory floor operators.</p>
+                        </div>
+                        <div class="project-sub-section">
+                            <h5>My Contributions & Impact</h5>
+                            <ul>
+                                <li><strong>Complex Alert Logic:</strong> Wrote ClickHouse SQL queries and advanced Grafana math expressions to catch both active machine faults and "silent disconnects" (network or power loss), completely eliminating monitoring blind spots on the floor.</li>
+                                <li><strong>Smart Alert Suppression:</strong> Built logic to actively detect routine machine maintenance, like standard purge cycles, intelligently suppressing notifications to prevent operators from being spammed with false positives.</li>
+                                <li><strong>Dynamic SQL Templating:</strong> Developed resilient SQL scripts for Grafana's Contact Points, transforming raw JSON data dumps into highly readable status messages (e.g., 'Power Off', '🔴 Aborted') that staff can read at a glance.</li>
+                                <li><strong>Consolidated Communications:</strong> Replaced multiple cluttered alert rules with a single, unified data stream, drastically improving the operator experience and response times during actual machine failures.</li>
+                            </ul>
+                        </div>
+                        <div class="project-gallery">
+                            <img src="assets/hourly_status_reports_ss_2.png" alt="hourly">
+                            <img src="assets/alerts_ss_2.png" alt="alerts">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Haddy Andon Lights -->
+                <div class="project-detailed-card">
+                    <div class="project-main-header">
+                        <h4>Industrial Stack Light Edge Driver</h4>
+                        <div class="project-tags"><span>Node.js</span><span>Hardware Integration</span><span>Data Analysis</span></div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-sub-section">
+                            <h5>Overview</h5>
+                            <p>Engineered a Node.js edge driver to control physical PATLITE signal towers mounted on large-format 3D printing robots, providing operators with real-time visual machine statuses. Following the hardware integration, I conducted a deep-dive analysis of 90 days of machine telemetry to design a high-accuracy, zero-noise alerting system for the factory floor.</p>
+                        </div>
+                        <div class="project-sub-section">
+                            <h5>My Contributions & Impact</h5>
+                            <ul>
+                                <li><strong>Hardware API Integration:</strong> Engineered a modular Node.js class to communicate with physical signal towers via REST endpoints, implementing robust async/await error handling and timeout catches for unreachable edge devices.</li>
+                                <li><strong>Algorithm Optimization:</strong> Developed a pure function mapping dynamic machine states to hardware payload strings. Optimized array lookups using JavaScript `Set` objects to achieve O(1) constant-time channel validation, ensuring maximum execution performance.</li>
+                                <li><strong>Two-Tiered Testing Suite:</strong> Built comprehensive testing protocols using the Node native test runner. Combined offline matrix verification with live network sweeps that successfully benchmarked hardware API latency at under 75ms.</li>
+                                <li><strong>Data-Driven Architecture:</strong> Analyzed 90 days of raw CEAD machine telemetry (512 distinct alarm codes) to isolate the 27 critical codes that actually trigger a hard stop, while proving that the most frequent alarm (fired 32.7 million times) was merely a harmless parking state.</li>
+                                <li><strong>Eliminating Alarm Fatigue:</strong> Used the telemetry findings to filter out millions of false positives, preventing the factory light towers from showing "false reds." This laid the technical foundation to replace a noisy legacy alerting system with a highly accurate, zero-noise fault notification pipeline.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+               <!-- Project 4: Haddy Central Knowledge Hub -->
+               <div class="project-detailed-card">
+                <div class="project-main-header">
+                    <h4>Haddy Central Knowledge Hub</h4>
+                    <div class="project-tags"><span>GitBook</span><span>Markdown</span><span>Search Architecture</span></div>
+                </div>
+                <div class="project-body">
+                    <div class="project-sub-section">
+                        <h5>Overview</h5>
+                        <p>I built a centralized web platform using GitBook to organize the company's scattered documents, standard operating procedures, and troubleshooting guides into one place. It acts as a single, searchable source of truth that lets everyone—from factory technicians to sales reps—instantly find the exact information they need from any device.</p>
+                    </div>
+                    <div class="project-sub-section">
+                        <h5>My Contributions</h5>
+                        <ul>
+                            <li><strong>Department-Specific Navigation:</strong> Designed custom landing hubs for Sales, Engineering, and Factory Operations so each team gets a personalized dashboard rather than a confusing wall of text.</li>
+                            <li><strong>Issue-Resolution Search Engine:</strong> Configured the search functionality so typing in a specific problem seamlessly routes users to the exact external hardware manual, training doc, or Jira escalation protocol they need.</li>
+                            <li><strong>6-Tier Factory Training Integration:</strong> Mapped the factory's entire 6-level Operator-to-Technician advancement system into the hub, linking out the specific study materials required to pass each stage gate.</li>
+                            <li><strong>Version Control:</strong> Managed the site lifecycle using Git and GitHub, treating the internal wiki like a deployable codebase to safely track updates.</li>
+                        </ul>
+                    </div>
+                    <div class="project-sub-section">
+                        <h5>Results</h5>
+                        <ul>
+                            <li>Gave the entire company a mobile-responsive website they can pull up anywhere—whether troubleshooting on the floor or jumping on a client call.</li>
+                            <li>Eliminated the need to dig through disconnected folders, making information access incredibly fast across all departments.</li>
+                            <li>Streamlined the onboarding process by giving new hires a clear, organized starting point for their training.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+                <div class="project-detailed-card">
+                    <div class="project-main-header">
+                        <h4>Virtual Reality Flight Simulator Environment</h4>
+                        <div class="project-tags"><span>3D Graphics</span><span>Web Dev</span></div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-sub-section">
+                            <h5>Overview</h5>
+                            <p>Designed a web-based 3D testing environment to model immersive virtual reality mechanics inside a standard browser.</p>
+                        </div>
+                        <div class="project-sub-section">
+                            <h5>My Contributions</h5>
+                            <ul>
+                                <li>Wrote clean HTML structures and vanilla CSS layouts to control exact 3D positioning.</li>
+                                <li>Experimented with depth fields, spatial perspective shifts, and custom user perspectives.</li>
+                            </ul>
+                        </div>
+                        <div class="project-sub-section">
+                            <h5>Results</h5>
+                            <ul>
+                                <li>Gained key technical exposure to early graphics rendering workflows, UI design systems, and rapid code iteration.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Dylan Gray Didier. Built from scratch.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
