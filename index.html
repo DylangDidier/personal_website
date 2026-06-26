@@ -187,7 +187,38 @@
                             </div>
                         </div>
                     </div>
-                </div> 
+
+                    <!-- Project 5: Rockwork Hybrid Printing Pipeline -->
+                    <div class="project-detailed-card">
+                        <div class="project-main-header">
+                            <h4>Rockwork Hybrid Printing Pipeline</h4>
+                            <div class="project-tags"><span>Python</span><span>Rhino / Grasshopper</span><span>Mesh Processing</span></div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-sub-section">
+                                <h5>Overview</h5>
+                                <p>Haddy 3D-prints large rock and boulder walls, but the overhang's can't be printed on the big machines without sagging. I built a Rhino/Grasshopper tool that takes a wall model and splits it into two parts: a base wall the large printers can handle, and small detailed inserts printed on the high-precision machines that snap into the base to fill in the parts it couldn't print.</p>
+                            </div>
+                            <div class="project-sub-section">
+                                <h5>My Contributions</h5>
+                                <ul>
+                                    <li><strong>Overhang Analysis:</strong> Wrote Python that scores every face by angle and paints a heatmap showing exactly which surfaces won't print on a large-format machine.</li>
+                                    <li><strong>Geometry Repair:</strong> Automated a "melt and carve" step that smooths the shallow overhangs flat and cuts the stubborn ones into clean pockets for the inserts.</li>
+                                    <li><strong>Inserts:</strong> Generated thin shell inserts that keep the rock detail on the front but stay hollow behind it, so they use minimal material and drop right into their pockets.</li>
+                                    <li><strong>Verification:</strong> Built a checker that re-scans the finished wall for any overhangs it missed and gives a simple pass/fail with the location of anything still broken.</li>
+                                </ul>
+                            </div>
+                            <div class="project-sub-section">
+                                <h5>Results</h5>
+                                <ul>
+                                    <li>Lets Haddy print detailed rock walls that the large machines couldn't handle on their own.</li>
+                                    <li>Replaces hours of manual mesh editing with a tool that does the analysis, repair, and checks automatically.</li>
+                                    <li>Cuts material and print time by carving only where needed and keeping the inserts hollow.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
 
@@ -201,7 +232,7 @@
                 </div>
 
                 <div class="projects-container">
-                    <!-- Project 5: Virtual Reality Flight Simulator -->
+                    <!-- Project 6: Virtual Reality Flight Simulator -->
                     <div class="project-detailed-card">
                         <div class="project-main-header">
                             <h4>Virtual Reality Flight Simulator Environment</h4>
