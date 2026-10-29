@@ -15,7 +15,7 @@
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
-            <a href="assets/Dylan-Didier-Resume.pdf class="resume-link" target="_blank">Resume ↗</a> <!-- UPDATE RESUME LINK -->
+            <a href="assets/Dylan-Didier-Resume.pdf" class="resume-link" target="_blank" rel="noopener">Resume ↗</a>
             <button id="theme-toggle" class="btn-toggle">🌗</button>
         </nav>
     </header>
@@ -232,7 +232,46 @@
                 </div>
 
                 <div class="projects-container">
-                    <!-- Project 6: Virtual Reality Flight Simulator -->
+                    <!-- Project 6: Auburn–Regions Data Hackathon -->
+                    <div class="project-detailed-card">
+                        <div class="project-main-header">
+                            <h4>Auburn–Regions Data Hackathon: Loan Default Prediction (3rd Place)</h4>
+                            <div class="project-tags"><span>Python</span><span>LightGBM</span><span>SHAP</span><span>scikit-learn</span><span>Credit Risk</span></div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-sub-section">
+                                <h5>Overview</h5>
+                                <p>A three-person team project with Dane Miller and Vaughn Miller. Working from a dataset of 45,000 loan applications, along with each applicant's past accounts and prior loan requests, we estimated every applicant's chance of serious payment trouble and turned those estimates into a lending policy that approves, declines, or offers a smaller loan. Because lending decisions are regulated, the model also had to be fair and able to explain every decline. We placed 3rd.</p>
+                            </div>
+                            <div class="project-sub-section">
+                                <h5>My Contributions</h5>
+                                <ul>
+                                    <li><strong>Gradient-Boosted Challenger:</strong> Trained a LightGBM model in Python on 30,000 training applications with 5-fold cross-validation and early stopping, using monotone constraints so each input can only push risk in the direction that makes business sense.</li>
+                                    <li><strong>SHAP Explanations:</strong> Used SHAP to break each applicant's risk score into how much every input pushed it up or down, turning the biggest upward pushes into the specific decline reasons fair-lending rules (Regulation B) require.</li>
+                                    <li><strong>Benchmarking:</strong> The LightGBM model edged out the team's 10-input logistic regression scorecard, with a cross-validated AUC of 0.745 vs. 0.742 (0.765 vs. 0.762 on the held-out validation set).</li>
+                                    <li><strong>Choosing Clarity Over Accuracy:</strong> We chose the scorecard as the final model, giving up 0.003 AUC for a simple points system that explains every decline. Its predicted default rates also held up at the decision cutoff (14.3% predicted vs. 14.1% actual).</li>
+                                    <li><strong>Profit-Based Lending Policy:</strong> Co-designed a policy that weighs each applicant's expected profit against expected loss, and offers a smaller loan to applicants who are too risky at the full amount.</li>
+                                </ul>
+                            </div>
+                            <div class="project-sub-section">
+                                <h5>Results</h5>
+                                <ul>
+                                    <li>Placed 3rd in the Auburn–Regions Data Hackathon.</li>
+                                    <li>The final policy lends to 69% of applicants: 65% in full at a 6.2% default rate, down from 12.6% if everyone were approved, plus 4% at a reduced amount.</li>
+                                    <li>Kept protected traits like age, marital status, and household size out of the model entirely, and checked outcomes across groups only after every decision was made.</li>
+                                    <li>Shipped a fully reproducible pipeline: one command rebuilds the predictions in under a minute, backed by 322 automated checks covering data quality, leakage, calibration, and fairness.</li>
+                                </ul>
+                            </div>
+
+                            <div class="project-gallery chart-gallery">
+                                <a class="gallery-wide" href="assets/hackathon_decision_mix.png" target="_blank" rel="noopener"><img src="assets/hackathon_decision_mix.png" alt="Final lending decision mix: 65% approved, 4% counteroffered, 31% declined"></a>
+                                <a href="assets/hackathon_shap_summary.png" target="_blank" rel="noopener"><img src="assets/hackathon_shap_summary.png" alt="SHAP summary plot showing which inputs push the LightGBM model's predicted risk up or down"></a>
+                                <a href="assets/hackathon_model_comparison.png" target="_blank" rel="noopener"><img src="assets/hackathon_model_comparison.png" alt="AUC comparison of the scorecard, the LightGBM challenger, and baseline models"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 7: Virtual Reality Flight Simulator -->
                     <div class="project-detailed-card">
                         <div class="project-main-header">
                             <h4>Virtual Reality Flight Simulator Environment</h4>

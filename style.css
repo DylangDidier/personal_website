@@ -249,6 +249,7 @@ section h3 {
 
 .project-tags {
     display: flex;
+    flex-wrap: wrap;
     gap: 0.5rem;
 }
 
@@ -439,7 +440,7 @@ footer {
 
 .project-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
     gap: 1.5rem;
     margin-top: 1rem;
     padding-top: 2rem;
@@ -521,4 +522,18 @@ footer {
 @media (max-width: 768px) {
     .master-group-card { padding: 1.5rem; }
     .master-group-header h3 { font-size: 1.8rem; }
+}
+
+/* Chart galleries: white chart backgrounds, one full-width headline chart, matched thumbnails */
+.chart-gallery img {
+    background-color: #fff;
+}
+
+.chart-gallery a:not(.gallery-wide) img {
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+}
+
+.chart-gallery .gallery-wide {
+    grid-column: 1 / -1;
 }
