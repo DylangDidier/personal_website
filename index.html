@@ -271,7 +271,39 @@
                         </div>
                     </div>
 
-                    <!-- Project 7: Virtual Reality Flight Simulator -->
+                    <!-- Project 7: Bitcoin Alpha Trust Network Analysis -->
+                    <div class="project-detailed-card">
+                        <div class="project-main-header">
+                            <h4>Bitcoin Alpha Trust Network Analysis &amp; Graph Modeling System</h4>
+                            <div class="project-tags"><span>Network Science</span><span>Graph Modeling</span><span>Community Detection</span><span>Statistical Analysis</span></div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-sub-section">
+                                <h5>Overview</h5>
+                                <p>For my Social Network Analysis course, I built a network science pipeline to explore how trust and reputation actually form in a decentralized crypto marketplace. The project analyzes the Bitcoin Alpha trust network: 3,783 users and 24,186 rated transactions.</p>
+                            </div>
+                            <div class="project-sub-section">
+                                <h5>My Contributions</h5>
+                                <ul>
+                                    <li><strong>Directed, Weighted Graph Model:</strong> Modeled the network as a directed, weighted graph, since trust isn't automatically mutual. Someone can rate you highly without you doing the same in return.</li>
+                                    <li><strong>Core &amp; Community Structure:</strong> Used K-core decomposition to find a dense 34-layer "inner circle" of power users, then applied Louvain and Walktrap community detection to map out separate trading clusters within the network.</li>
+                                    <li><strong>Power-Law Testing:</strong> Tested whether the network follows a power-law (scale-free) structure using Maximum Likelihood Estimation, finding a heavy-tailed degree distribution (α = 2.7, x<sub>min</sub> = 32) with a bootstrap goodness-of-fit p-value of 0.08.</li>
+                                    <li><strong>Null-Model Benchmarking:</strong> To confirm these patterns weren't random, benchmarked the real network against two generative baselines: a randomized null model (rewired edges, same degree sequence) and a Holme-Kim model, measuring how much more clustered and small-world the real data was.</li>
+                                    <li><strong>Inequality Analysis:</strong> Used Lorenz curves to measure how unevenly influence and connections are spread across users.</li>
+                                </ul>
+                            </div>
+                            <div class="project-sub-section">
+                                <h5>Results</h5>
+                                <ul>
+                                    <li>Found that a small number of users hold a disproportionate share of the network's connections.</li>
+                                    <li>Uncovered a serious structural bottleneck: the maximum betweenness centrality was 246x the network average, meaning the platform's stability essentially rests on a small handful of gatekeepers.</li>
+                                    <li>Identified a dual behavioral pattern among elite users: negative degree assortativity (−0.16) shows they actively vouch for and connect with newcomers, while positive trust-attribute assortativity (0.098) shows they keep their highest-value transactions within a tight, high-trust core.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 8: Virtual Reality Flight Simulator -->
                     <div class="project-detailed-card">
                         <div class="project-main-header">
                             <h4>Virtual Reality Flight Simulator Environment</h4>
